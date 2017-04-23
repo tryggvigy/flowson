@@ -1,13 +1,13 @@
 // @flow
+const fs = require('fs');
 const commander = require('commander')
 const pkg = require('./package.json')
-const {toFlow, setTypeName} = require('./toFlow')
-const {readFile} = require('./utils')
+const fton = require('./fton');
 
 commander.version(pkg.version)
 commander.usage('[options] <file ...>')
-commander.option('--verbose', 'output verbose messages on internal operations')
-commander.option('--typename', 'name of the type in the generated flow definition file')
+commander.option('-i, --indent <n>', 'level of indentation in output', parseInt)
+commander.option('-t, --typename', 'name of the type in the generated flow definition file')
 commander.parse(process.argv)
 
 if (commander.args.length !== 1) {
@@ -15,14 +15,8 @@ if (commander.args.length !== 1) {
   process.exit(1)
 }
 
-const [jsonFile] = commander.args
+const inputFilename = commander.args[0]
+const inputJson = fs.readFileSync(inputFilename)
+const flowString = fton(inputFilename, inputJson, commander)
 
-readFile(jsonFile)
-  .then(fileContents => JSON.parse(fileContents))
-  .then(obj => toFlow(obj, jsonFile))
-  .then(flowString => setTypeName(flowString, jsonFile, commander.typeName))
-  .then(res => console.log(res))
-  .catch(err => {
-    console.log(err);
-  })
-
+console.log(flowString)

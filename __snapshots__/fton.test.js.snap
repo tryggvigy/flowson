@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fton transforms json as expected 1`] = `
+"// @flow
+export type configT = {
+  \\"str\\": \\"cake\\",
+  \\"number\\": 1,
+  \\"bool\\": false,
+  \\"arr\\": [
+    1,
+    true,
+    \\"foo\\",
+    {},
+    [
+      1,
+      {
+        \\"foo\\": \\"bar\\"
+      }
+    ]
+  ],
+  \\"nestedObj\\": {
+    \\"arr\\": [
+      1,
+      true,
+      \\"foo\\",
+      {},
+      [
+        1,
+        {
+          \\"foo\\": \\"bar\\"
+        }
+      ]
+    ]
+  }
+}"
+`;
