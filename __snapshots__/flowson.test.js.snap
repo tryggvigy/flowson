@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fton can set indentation and typename 1`] = `
+exports[`flowson can set indentation and typename 1`] = `
 "// @flow
 export type configT = {
     \\"str\\": \\"cake\\",
@@ -14,7 +14,7 @@ export type configT = {
 }"
 `;
 
-exports[`fton transforms json as expected 1`] = `
+exports[`flowson transforms json as expected 1`] = `
 "// @flow
 export type configT = {
   \\"str\\": \\"cake\\",

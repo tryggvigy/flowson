@@ -1,7 +1,7 @@
 const fs = require('fs');
 const commander = require('commander')
 const pkg = require('./package.json')
-const fton = require('./fton');
+const flowson = require('./flowson');
 
 commander.version(pkg.version)
 commander.usage('[options] <file ...>')
@@ -17,7 +17,7 @@ if (commander.args.length !== 1) {
 try {
   const inputFilename = commander.args[0]
   const inputJson = fs.readFileSync(inputFilename)
-  const flowString = fton(inputFilename, inputJson, commander)
+  const flowString = flowson(inputFilename, inputJson, commander)
   console.log(flowString)
 } catch (exception) {
   console.error(exception)

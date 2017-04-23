@@ -1,4 +1,4 @@
-module.exports = function fton(inputFilename, inputJson, options = {}) {
+module.exports = function flowson(inputFilename, inputJson, options = {}) {
   const stringifiedJson = JSON.stringify(
     JSON.parse(inputJson), 
     null, 

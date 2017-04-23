@@ -1,9 +1,9 @@
 {
-  "name": "fton",
+  "name": "flowson",
   "version": "1.0.0",
   "license": "MIT",
   "bin": {
-    "fton": "./index.js"
+    "flowson": "./index.js"
   },
   "scripts": {
     "test": "jest"

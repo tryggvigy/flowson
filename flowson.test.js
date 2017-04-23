@@ -1,15 +1,15 @@
-const fton = require('./fton')
+const flowson = require('./flowson')
 const pkg = require('./package.json')
 
-describe('fton', () => {
+describe('flowson', () => {
   it('handles empty objects', () => {
     expect(
-      fton('config.json', '{}')
+      flowson('config.json', '{}')
     ).toEqual('// @flow\nexport type configT = {}')
   })
 
   it('transforms json as expected', () => {
-    expect(fton(
+    expect(flowson(
       'config.json', 
       `{
         "str": "cake",
@@ -26,7 +26,7 @@ describe('fton', () => {
   })
   
   it('can set indentation and typename', () => {
-    expect(fton(
+    expect(flowson(
       'config.json', 
       `{
         "str": "cake",
