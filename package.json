@@ -1,0 +1,16 @@
+{
+  "name": "fton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.44.2",
+    "jest": "^19.0.2"
+  }
+}
