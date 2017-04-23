@@ -1,4 +1,3 @@
-// @flow
 const fs = require('fs');
 const commander = require('commander')
 const pkg = require('./package.json')
@@ -15,8 +14,14 @@ if (commander.args.length !== 1) {
   process.exit(1)
 }
 
-const inputFilename = commander.args[0]
-const inputJson = fs.readFileSync(inputFilename)
-const flowString = fton(inputFilename, inputJson, commander)
+try {
+  const inputFilename = commander.args[0]
+  const inputJson = fs.readFileSync(inputFilename)
+  const flowString = fton(inputFilename, inputJson, commander)
+  console.log(flowString)
+} catch (exception) {
+  console.error(exception)
+  process.exit(1)
+}
 
-console.log(flowString)
+process.exit(0)

@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fton can set indentation and typename 1`] = `
+"// @flow
+export type configT = {
+    \\"str\\": \\"cake\\",
+    \\"foo\\": [
+        1,
+        2
+    ],
+    \\"nestedObj\\": {
+        \\"foo\\": \\"bar\\"
+    }
+}"
+`;
+
 exports[`fton transforms json as expected 1`] = `
 "// @flow
 export type configT = {
@@ -30,7 +44,11 @@ export type configT = {
           \\"foo\\": \\"bar\\"
         }
       ]
-    ]
+    ],
+    \\"foo\\": \\"bar\\",
+    \\"Baz-foo\\": {
+      \\"baz_\\": 1
+    }
   }
 }"
 `;
