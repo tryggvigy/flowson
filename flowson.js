@@ -5,7 +5,7 @@ module.exports = function flowson(inputFilename, inputJson, options = {}) {
     options.indent || 2
   )
 
-  const typeName = options.typeName ? options.typeName : `${inputFilename.split('.')[0]}T`
+  const typeName = options.typename ? options.typename : `${inputFilename.split('.')[0]}T`
 
   const flowString = `// @flow\nexport type ${typeName} = ${stringifiedJson}`
 

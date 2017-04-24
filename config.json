@@ -2,8 +2,11 @@
   "str": "cake",
   "number": 1,
   "bool": false,
-  "arr": [1, true, "foo", {}, [1, {"foo": "bar"}]],
+  "arr": [
+    1, 
+    true
+  ],
   "nestedObj": {
-    "arr": [1, true, "foo", {}, [1, {"foo": "bar"}]]
+    "foo": "bar"
   }
 }
