@@ -1,7 +1,9 @@
-const fs = require('fs');
+#! /usr/bin/env node
+
+const fs = require('fs')
 const commander = require('commander')
 const pkg = require('./package.json')
-const flowson = require('./flowson');
+const flowson = require('./flowson')
 
 commander.version(pkg.version)
 commander.usage('[options] <file ...>')

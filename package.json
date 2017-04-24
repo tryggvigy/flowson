@@ -1,6 +1,6 @@
 {
   "name": "flowson",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "bin": {
     "flowson": "./index.js"
@@ -8,6 +8,7 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": "tryggvigy/flowson",
   "dependencies": {
     "commander": "^2.9.0"
   },
